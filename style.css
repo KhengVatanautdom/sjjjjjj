@@ -1,0 +1,1318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background: url('bg4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative; /* Needed for the pseudo-element */
+}
+/*
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 38, 67, 0.255); /* Add semi-transparent color */
+    /*z-index: -1; 
+    pointer-events: none;  
+*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+
+}
+.logo {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 5px;
+    background-color: white; 
+     /* Keeps the logo and text aligned vertically */
+}
+
+.logo img {
+    height: 60px; /* Reduced the size of the logo */
+    width: auto;
+    
+}
+
+
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #cc0d0d;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+.navigation a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color:#fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+
+}
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+
+/* Search container styling */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Search input box styling */
+.search-box {
+    width: 150px; /* Smaller width */
+    padding: 8px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Semi-transparent border */
+    border-radius: 5px 0 0 5px;
+    font-size: 14px; /* Slightly smaller text */
+    color: #fff; /* White text to match the background */
+    outline: none;
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
+    transition: border-color 0.3s ease;
+}
+
+/* Change border color when focused */
+.search-box:focus {
+    border-color: #cb7070;
+}
+
+/* Search button styling */
+.search-button {
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent button */
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font */
+    transition: background-color 0.3s ease;
+}
+
+/* Change button color on hover */
+.search-button:hover {
+    background-color: #ff4d4d;
+}
+
+/* Responsive Design: Adjust the search box width for smaller screens */
+
+/* Layout styling for the main container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    column-gap: 50px;
+}
+
+/* Flex-grow to push the footer to the bottom */
+.main-content {
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    flex-grow: 1;
+    position: relative;
+    height: 200px; /* Set the height to the viewport height */
+    text-align: center;
+    
+}
+
+
+
+.main-content h1{
+    margin-top: 200px;
+    font-family: 'Times New Roman', Times, serif; /* Change the font family */
+    font-size: 60px; /* Set the font size */
+    font-weight: bold; /* Make the text bold */
+    color: #ff0808;
+    background: transparent;
+    backdrop-filter: blur(2px);
+    border-radius: 30px;
+    padding: 10px;
+}
+.main-content h2 {
+    font-family: 'Times New Roman'; /* Font family */
+    font-size: 35px; /* Font size */
+     /* Bold text */
+    color: #e4d2d2; /* Text color */
+   /* Example background color, adjust as needed */
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px; /* Padding around text */
+}
+
+
+
+
+
+.main-content p {
+    font-size: 16px;
+    font-family: 'Courier New';
+    color: #e5f8ff;
+    font-style: inherit;
+    background: transparent;
+    background-color: rgba(0, 41, 122, 0.567);
+    padding: 10px;
+    border-radius: 20px;
+
+}
+.join-button {
+    background-color: #cf0606; /* Button background color */
+    color: white; /* Button text color */
+    padding: 8px 15px; /* Padding for button */
+    text-align: center;
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px;
+    border-radius: 25px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #ff6868; /* Darken the button on hover */
+}
+
+
+.clickable-image1 {
+    /* Button background color */
+    color: white; /* Button text color */
+    padding: 3px 3px; /* Padding for button */
+    text-align: center;
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px;
+    border-radius: 25px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.clickable-image1:hover {
+    background-color: #ffdfdf96
+}
+.clickable-image2 {
+    /* Button background color */
+    color: white; /* Button text color */
+    padding: 3px 3px; /* Padding for button */
+    text-align: center;
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px;
+    border-radius: 25px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.clickable-image2:hover {
+    background-color: #ffdfdf96
+}
+
+/* Footer styling */
+.footer {
+    background-color: #000c48b6;
+    padding: 20px;
+    width: 100%;
+    bottom: auto;
+    margin-top: 500px; /* Jam do puk mi nis pg for footer tv kroam oy os */
+    margin-bottom: 0;
+    position: relative; /* Changed to relative */
+}
+
+
+/* Flex-grow to push the footer to the bottom */
+.main-product {
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    flex-grow: 1;
+    position: relative;
+    height: 200px; /* Set the height to the viewport height */
+    text-align: center;
+    
+}
+
+
+
+.main-product h1{
+    margin-top: 200px;
+    font-family: 'Times New Roman', Times, serif; /* Change the font family */
+    font-size: 60px; /* Set the font size */
+    font-weight: bold; /* Make the text bold */
+    color: #ff0808;
+    background: transparent;
+    backdrop-filter: blur(2px);
+    border-radius: 30px;
+    padding: 10px;
+}
+.main-product h2 {
+    font-family: 'Times New Roman'; /* Font family */
+    font-size: 35px; /* Font size */
+     /* Bold text */
+    color: #e4d2d2; /* Text color */
+    background-color: #333; /* Example background color, adjust as needed */
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px; /* Padding around text */
+}
+
+
+.main-product h2 a {
+    color: #ffffff;
+    font-family: 'Times New Roman'; /* Color of the links inside h2 */
+    text-decoration: none; /* Remove underline */
+    margin-right: 15px; 
+    padding: 20px;/* Add some space between links */
+}
+
+.main-product h2 a:hover {
+    color: #b41919; /* Change color when hovered */
+}
+
+
+.main-product p {
+    font-size: 16px;
+    font-family: 'Courier New';
+    color: #e5f8ff;
+    font-style: inherit;
+    background: transparent;
+    background-color: rgba(0, 41, 122, 0.567);
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.footer h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style-type: none;
+    
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+
+}
+.footer p a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+    
+}
+
+/* Divider styling */
+.footer-divider {
+    border: 1px solid #ffffff;
+    margin: 20px 0;
+}
+
+/* Bottom footer styling */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Social icons */
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-socials a {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+
+/*Footer for main page*/
+/* Footer styling */
+.main-footer {
+    background-color: #000c48b6;
+    padding: 20px;
+    width: 100%;
+    bottom: auto;
+    margin-top: 2500px; /* Jam do puk mi nis pg for footer tv kroam oy os */
+    margin-bottom: 0;
+    position: relative; /* Changed to relative */
+}
+
+.main-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.main-footer h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-footer ul {
+    list-style-type: none;
+    
+    padding: 0;
+}
+
+.main-footer ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.main-footer ul li a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+
+}
+.main-footer p a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+    
+}
+
+/* Divider styling */
+.main-footer-divider {
+    border: 1px solid #ffffff;
+    margin: 20px 0;
+}
+
+/* Bottom footer styling */
+.main-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-footer-bottom p {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Social icons */
+.main-footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.main-footer-socials a {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+/* Footer styling for Training */
+.train-footer {
+    background-color: #000c48b6;
+    padding: 20px;
+    width: 100%;
+    bottom: 100%;
+    margin-top: 3000px; /* Jam do puk mi nis pg for footer tv kroam oy os */
+    margin-bottom: 0;
+    position: relative; /* Changed to relative */
+}
+
+.train-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.train-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.train-footer h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.train-footer ul {
+    list-style-type: none;
+    
+    padding: 0;
+}
+
+.train-footer ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.train-footer ul li a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+
+}
+.train-footer p a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+    
+}
+
+/* Divider styling */
+.train-footer-divider {
+    border: 1px solid #ffffff;
+    margin: 20px 0;
+}
+
+/* Bottom footer styling */
+.train-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.train-footer-bottom p {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Social icons */
+.train-footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.train-footer-socials a {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+
+
+/* Footer styling for Product */
+.pro-footer {
+    background-color: #000c48b6;
+    padding: 20px;
+    width: 100%;
+    bottom: 100%;
+    margin-top: 5000px; /* Jam do puk mi nis pg for footer tv kroam oy os */
+    margin-bottom: 0;
+    position: relative; /* Changed to relative */
+}
+
+.pro-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.pro-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.pro-footer h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.pro-footer ul {
+    list-style-type: none;
+    
+    padding: 0;
+}
+
+.pro-footer ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.pro-footer ul li a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+
+}
+.pro-footer p a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+    
+}
+
+/* Divider styling */
+.pro-footer-divider {
+    border: 1px solid #ffffff;
+    margin: 20px 0;
+}
+
+/* Bottom footer styling */
+.pro-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pro-footer-bottom p {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Social icons */
+.pro-footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.pro-footer-socials a {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Image styling */
+img {
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    border-color: #ff3a3a;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    object-fit: cover; /* Ensures images cover the slide area */
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 700px;
+    overflow: hidden; /* Ensures content that overflows is hidden */
+    display: flex;
+}
+
+/* Individual slide styling */
+.carousel-slide {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    min-width: 100%; /* Prevents the shrinking behavior */
+    height: 100%;
+    flex-shrink: 0;
+    gap: 60px;
+    padding: 20px;
+    animation: slideAnimation 10s infinite;
+}
+
+/* Styling images */
+.carousel-image {
+    width: 26%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Animation for sliding */
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); } /* Hold the first slide */
+    25% { transform: translateX(-100%); } /* Slide to the second */
+    45% { transform: translateX(-100%); } /* Hold the second slide */
+    50% { transform: translateX(-200%); } /* Slide to the third */
+    70% { transform: translateX(-200%); } /* Hold the third slide */
+    75% { transform: translateX(-300%); } /* Slide to the fourth */
+    95% { transform: translateX(-300%); } /* Hold the fourth slide */
+    100% { transform: translateX(0); } /* Return to the first slide */
+}
+
+
+
+
+.wrapper {
+    position: fixed; /* Changed to fixed to ensure it stays in the center */
+    top: 50%; /* Centers it vertically */
+    left: 50%; /* Centers it horizontally */
+    transform: translate(-50%, -50%); /* Corrects the centering by shifting the element back */
+    width: 500px;
+    padding: 30px;
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0); /* Hidden by default */
+    transition: transform 0.5s ease, height 0.2s ease;
+    z-index: 1000; /* Make sure it's above other elements */
+}
+
+.wrapper.active-popup {
+    transform: translate(-50%, -50%) scale(1); /* When active, it scales to full size and stays centered */
+}
+.wrapper .active {
+    height: 520px;
+}
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login {
+    transition: transform .18 ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-450px);
+}
+
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(480px);
+}
+.wrapper.active .form-box.register {
+    transition: transform .18 ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #f05353;
+    font-size: 2em;
+    color: #150a43;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #d8cfcf;
+    margin: 30px 0;
+
+}
+
+/*.input-box input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #444;
+    outline: none;
+    font-size: 16px;
+}*/
+
+.input-box label {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+  
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #ffffff;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #cb7070;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-register {
+    text-align: center;
+    margin: 25px 0 10px;
+    color: #fff;
+    font-size: .9em;
+    font-weight: 500;
+}
+
+.login-register p a {
+    color: #e10000;
+    text-decoration: none;
+    font-weight: 600;
+
+    
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+
+  
+  
+  
+
+
+
+
+
+/* For larger desktops */
+@media (min-width: 1231px) {
+    header {
+        font-size: 1rem;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content p, .content h2 {
+        font-size: 1.2rem;
+    }
+    .navigation .btnLogin-popup {
+        width: 130px;
+        height: 50px;
+        font-size: 1.1em;
+    }
+   
+    
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.8rem;
+    }
+
+    header {
+        padding: 10px 50px;
+        font-size: 0.9rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navigation .btnLogin-popup {
+        width: 100px;
+        height: 40px;
+        font-size: 0.9em; /* Smaller font for tablet */
+    }
+
+    .navigation a {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+        margin-top: 100px;
+    }
+
+    .content p, .content h2 {
+        font-size: 1rem;
+    }
+
+    .slideshow-container {
+        max-width: 300px;
+    }
+
+    .slide {
+        width: 300px;
+        height: 400px;
+    }
+    
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navigation a {
+        font-size: 0.8rem;
+        margin-left: 10px;
+    }
+    .navigation .btnLogin-popup {
+        width: 80px;  /* Smaller width */
+        height: 30px; /* Smaller height */
+        font-size: 0.8em; /* Adjust the font size */
+        padding: 5px;   /* Reduce padding */
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-box {
+        width: 40%;
+        height: 30px;
+    }
+
+    .search-button {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        margin-top: 150px;
+        padding: 10px;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .content p, .content h2 {
+        font-size: 0.9rem;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+        margin-top: 700px;
+        left: 15%;
+    }
+
+    .slide {
+        width: 300px;
+        height: 400px;
+        
+        
+        
+    }
+
+    .cn {
+        font-size: 0.8rem;
+        padding: 5px;
+        width: 100px;
+    }
+
+    .wrapper {
+        width: 50%;
+    }
+    .pro-footer{
+        margin-top: 5000px; /* Jam do puk mi nis pg for footer tv kroam oy os */
+        margin-bottom: 0;
+        position: relative;
+    }    
+}   
+
+
+
+
+
+
+
+
+
+/* Container Styles */
+#training {
+    background: transparent;
+    backdrop-filter: blur(5px);
+    padding: 16px;
+    border-radius: 20px;
+}
+
+#training .section-header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#training .products-grid {
+    display: grid;
+    background-color: #0049c77a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    #training .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main-contant .image {
+        max-width: 200px; /* Ensure image scales */
+        height: 300px; /* Maintain aspect ratio */
+    }
+}
+
+@media (min-width: 1024px) {
+    #training .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .main-contant .image {
+        max-width: 350px; /* Ensure image scales */
+        height: 550px; /* Maintain aspect ratio */
+    }
+}
+
+@media (min-width: 1280px) {
+    #training .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    
+}
+
+/* Individual Product Styles */
+.product-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    
+    /* bg-gray-200 */
+    border-radius: 0.5rem; /* rounded-lg */
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 80%;
+    height: 20rem;
+    object-fit: cover;
+    object-position: center;
+    transition: all .40s;
+}
+
+
+
+.product-card img:hover {
+    transform: scale(0.9);
+}
+
+.product-card h3 {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #ffffff; /* text-gray-700 */
+}
+
+.product-card p {
+    margin-top: 0.25rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #fafafa; /* text-gray-900 */
+}
+
+
+
+
+
+
+/* Service part */
+.main-contant {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+     /* Reduce gap */
+    padding: 20px;
+    margin-top: 50px; 
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Left-side styling */
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+    gap: 10px; /* This gap controls the space between items inside .left-side */
+}
+
+.right-side {
+    flex: 1;
+    margin-right: 10px; /* Reduce margin to decrease the gap */
+}
+
+/* Slideshow container (using .image-grid) */
+.image-grid {
+    position: relative;
+    max-width: 1000px; /* Adjust width as needed */   
+    margin-top: 100px;/* Center the slideshow container */
+}
+.left-side, .right-side {
+    flex-basis: 45%; /* Ensure both sides take up a balanced amount of space */
+}
+/* Hide all slides by default */
+.slide {
+    display: none;
+}
+
+/* Style for images */
+.image {
+    width: 500px; /* Make image responsive */
+    height: 600px;
+    border-radius: 8px;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+}
+
+/* Adjust button positions to be outside the image */
+.prev {
+    left: -50px; /* Adjust to move button outside image */
+}
+
+.next {
+    right: -50px; /* Adjust to move button outside image */
+}
+
+/* Animation for fading effect */
+.fade {
+    animation: fadeEffect 0.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+/* For smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+
+    
+    .main-contant {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 20px; /* Adjust gap between image and text */
+    }
+
+    .left-side, .right-side {
+        flex-basis: 100%; /* Full width for both sides */
+        text-align: center; /* Center text on small screens */
+        margin-right: 0;
+    }
+
+    .right-side {
+        padding: 0 20px; /* Add padding for readability */
+    }
+    
+    .image-grid {
+        max-width: 80%; /* Make image responsive to screen size */
+        margin: 0 auto; /* Center image */
+    }
+}
+
+.pagination {
+    text-align: center;
+
+}
+.pagination a {
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+    background-color: #d8cfcf;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a.active{
+    background-color: #e10000;
+    color: #fcfcfc;
+    
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ee8383; /* Darken background on hover */
+    color: #fcfcfc; /* Change text color to white */
+}

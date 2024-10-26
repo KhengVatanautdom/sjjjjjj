@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <title>SD Automation Training and Service</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .main-contant {
+        margin-top:200px;
+    }
+    .main-contant p{
+        color: #ddd;
+    }
+    .main-contant h1{
+        font-family: 'Times New Roman';
+        color: red;
+    }
+        /* Products container styling */
+    .products-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center products horizontally */
+        gap: 20px; /* Space between product cards */
+        padding: 20px;
+    }
+
+    /* Product card styling */
+    .product-card {
+        width: calc(25% - 20px); /* Set each product card to 25% of the container */
+        max-width: 300px; /* Limit maximum width */
+        min-width: 200px; /* Ensure it stays reasonable on smaller screens */
+        margin: 10px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: #ffffff;
+        padding: 15px;
+        margin-top: 50px;
+
+    }
+    
+  
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .product-card h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .product-card p {
+        margin-bottom: 10px;
+        color: black;
+    }
+
+    .product-card .price {
+        font-size: 16px;
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    .product-card .rating {
+        margin-top: 5px;
+    }
+
+    /* Search bar styling */
+    .search-b {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        margin-top: 100px;
+    }
+
+    .search-b input {
+        width: 70%;
+        max-width: 400px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 20px 0 0 20px;
+        outline: none;
+        font-size: 16px;
+    }
+
+    .search-b button {
+        background-color: #ff0000;
+        color: #fff;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .product-card {
+        position: relative;
+        transition: all .40s;
+    
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        transition: all .40s;
+    }
+
+    .product-card img:hover {
+        transform: scale(0.9);
+    }
+
+    .product-card img {
+        width: 250px;
+        height: 250px;
+
+    }
+    main {
+        margin-top: -100px;
+        padding: 0 10px;
+    }
+    .menu {
+        background-color: rgb(145, 145, 145);
+        border-radius: 20px;
+        text-align: center;
+    }
+    
+    
+    .menu a{
+       
+        margin-left: 50px;
+        text-decoration: none;
+        color: #ffffff;
+        font-family: 'Times New Roman';
+        
+        
+        
+        font-size: 30px;
+        
+        padding: 10px;
+        
+    }
+    .menu a:hover {
+        color: #b41919; /* Change color when hovered */
+    }
+    .buy a {
+        margin-bottom: 100px;
+    }
+
+
+
+    /* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .product-card {
+        width: calc(50% - 10px); /* 2 products per row */
+        margin-bottom: 20px; /* Adds space between rows */
+    }
+    
+}
+
+/* Responsive design for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .product-card {
+        width: calc(33.33% - 20px); /* 3 products per row */
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive design for very small screens */
+@media (max-width: 480px) {
+    .product-card {
+        width: calc(100% - 20px); /* 1 product per row */
+        margin-bottom: 20px;
+    }
+}
+
+</style>
+
+<body class="main-contant">
+
+
+
+    <header>
+        <h2 class="logo">
+            <a href="/index.html">
+                <img src="SD.png" alt="SD Automation Logo"> <!-- Logo Image -->
+                 <!-- Text -->
+            </a>
+        </h2>
+        <nav class="navigation">
+            <a href="/index.html">Home</a>
+            <a href="/training.html">Training</a>
+            <a href="/service.html">Services</a>
+            <a href="/product.html">Products</a>
+            <a href="/download.html">Downloads</a>
+            <a href="/contact.html">Contacts</a>
+           
+
+        </nav>
+        
+     
+        
+    </header>
+    <h1>SD Automation's Products</h1>
+                <br>
+                <br>
+                <p>Welcome to SD Automation training and Service, វគ្គសិក្សាថ្មីជាមួយនឹងថ្នាក់រៀនថ្មី<br> 
+                    និងឧបករណ៍អនុវត្តន៍ទំនើបៗយ៉ាងសំបូរបែប​សម្រាប់ថ្នាក់ Automation & Siemens PLC<br>
+                    សមស្របតាមការងារជាក់ស្ដែងនៅតាមរោងចក្រ សហគ្រាស និងសង្វាក់ផលិតកម្ម។.<br>
+                    Feel free to check out your preferences through our website.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="buy"><a href="https://t.me/SDautomation" class="join-button">BUY NOW</a></div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+                    
+    <main>
+        <div class="menu">
+            <a href="/product.html">Siemens</a>
+            <a href="/product-M.html">Mitsubishi</a>
+            <a href="/product-Y.html">Yaskawa</a>
+            <a href="/product-K.html">Kuka</a> 
+            <a href="/product-others.html">Others</a>
+        </div>
+
+        <form action="/search"  class="search-b">
+            <input type="text" name="query" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        
+        <div class="products-container">
+           
+            <!-- Each product card -->
+            <div class="product-card">
+                <img src="https://sokoskins.shop/cdn/shop/files/41YlCQmxNqL._AC_1024x1024@2x.jpg?v=1718776687" alt="Anua Heartleaf Cleanser" />
+                <h2>Anua Heartleaf Cleanser</h2>
+                <p>A lightweight essence powered by 96.3% snail mucin to repair and hydrate damaged skin, leaving it supple and glowing.
+                </p>
+                <span class="price">7.77 $</span>
+                <div class="rating">⭐️⭐️⭐⭐⭐ (5.0)</div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://sokoskins.shop/cdn/shop/files/41YlCQmxNqL._AC_1024x1024@2x.jpg?v=1718776687" alt="Anua Heartleaf Cleanser" />
+                <h2>Anua Heartleaf Cleanser</h2>
+                <p>A lightweight essence powered by 96.3% snail mucin to repair and hydrate damaged skin, leaving it supple and glowing.
+                </p>
+                <span class="price">7.77 $</span>
+                <div class="rating">⭐️⭐️⭐⭐⭐ (5.0)</div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://sokoskins.shop/cdn/shop/files/41YlCQmxNqL._AC_1024x1024@2x.jpg?v=1718776687" alt="Anua Heartleaf Cleanser" />
+                <h2>Anua Heartleaf Cleanser</h2>
+                <p>A lightweight essence powered by 96.3% snail mucin to repair and hydrate damaged skin, leaving it supple and glowing.
+                </p>
+                <span class="price">7.77 $</span>
+                <div class="rating">⭐️⭐️⭐⭐⭐ (5.0)</div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://sokoskins.shop/cdn/shop/files/41YlCQmxNqL._AC_1024x1024@2x.jpg?v=1718776687" alt="Anua Heartleaf Cleanser" />
+                <h2>Anua Heartleaf Cleanser</h2>
+                <p>A lightweight essence powered by 96.3% snail mucin to repair and hydrate damaged skin, leaving it supple and glowing.
+                </p>
+                <span class="price">7.77 $</span>
+                <div class="rating">⭐️⭐️⭐⭐⭐ (5.0)</div>
+            </div>
+            
+            
+           
+
+        </div>
+            
+            
+
+
+            
+        
+                    <!-- More product cards here -->
+                
+    </main>
+
+</body>
+
+</html>
